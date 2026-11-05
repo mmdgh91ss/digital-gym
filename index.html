@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="آموزش حرکات بدنسازی با دستگاه برای کل بدن با فیلم آموزشی، برنامه تمرینی و نکات مربی">
+<title>باشگاه دیجیتال | آموزش حرکات بدنسازی با دستگاه</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--o:#ff6b35;--o2:#f7931e;--bg:#0f141d;--bg2:#1a2230;--bg3:#232e42;--tx:#eef2f7;--mu:#8b97ab;--bd:rgba(255,255,255,.09);--grad:linear-gradient(135deg,#ff6b35,#f7931e)}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--tx);line-height:1.8}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* ===== Nav ===== */
+nav{position:sticky;top:0;z-index:100;background:rgba(15,20,29,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:900}
+.brand .bi{width:40px;height:40px;background:var(--grad);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.nav-links{display:flex;gap:6px}
+.nav-links a{padding:8px 16px;border-radius:10px;font-size:14px;color:var(--mu);transition:.2s;cursor:pointer}
+.nav-links a:hover,.nav-links a.on{background:var(--bg3);color:var(--tx)}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(160deg,#1a2230,#0f141d);position:relative;overflow:hidden;padding:70px 0 80px;text-align:center}
+.hero::before{content:'';position:absolute;top:-120px;right:20%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,107,53,.18),transparent 65%)}
+.hero::after{content:'';position:absolute;bottom:-120px;left:15%;width:350px;height:350px;background:radial-gradient(circle,rgba(247,147,30,.12),transparent 65%)}
+.hero h1{font-size:clamp(26px,4.5vw,44px);font-weight:900;position:relative;line-height:1.5}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:600px;margin:16px auto 0;color:var(--mu);font-size:15.5px;position:relative}
+.hero .cta{margin-top:28px;position:relative}
+.btn{display:inline-block;background:var(--grad);color:#fff;font-family:inherit;font-size:15px;font-weight:700;padding:13px 34px;border-radius:14px;border:none;cursor:pointer;transition:.2s;box-shadow:0 6px 22px rgba(255,107,53,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,107,53,.45)}
+.btn.ghost{background:transparent;border:1.5px solid var(--bd);color:var(--tx);box-shadow:none}
+.stats-bar{display:flex;justify-content:center;gap:14px;margin-top:44px;position:relative;flex-wrap:wrap}
+.sb{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:16px 28px;min-width:130px}
+.sb b{display:block;font-size:26px;color:var(--o)}
+.sb span{font-size:12px;color:var(--mu)}
+
+/* ===== Sections ===== */
+section{padding:50px 0}
+.sec-head{text-align:center;margin-bottom:34px}
+.sec-head h2{font-size:clamp(20px,3vw,28px);font-weight:900}
+.sec-head h2 span{color:var(--o)}
+.sec-head p{color:var(--mu);font-size:13.5px;margin-top:6px}
+
+/* ===== Muscle grid ===== */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.mcard{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:22px 12px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.mcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transition:.25s}
+.mcard:hover{transform:translateY(-4px);border-color:rgba(255,107,53,.4)}
+.mcard:hover::after{transform:scaleX(1)}
+.mcard .mi{font-size:36px}
+.mcard .mn{font-weight:800;font-size:15px;margin-top:10px}
+.mcard .mc{font-size:11px;color:var(--mu)}
+
+/* ===== Exercise cards ===== */
+.exgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.excard{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;overflow:hidden;cursor:pointer;transition:.2s}
+.excard:hover{transform:translateY(-4px);border-color:rgba(255,107,53,.45);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.excard .thumb{background:#000;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+.excard .thumb img{width:100%;height:100%;object-fit:contain}
+.excard .body{padding:14px}
+.excard .nm{font-weight:800;font-size:15px}
+.excard .en{font-size:11px;color:var(--mu);direction:ltr;text-align:right;margin:3px 0 8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tg{font-size:10.5px;background:rgba(255,107,53,.14);color:var(--o);padding:3px 10px;border-radius:20px}
+.tg.g{background:rgba(46,204,113,.14);color:#2ecc71}
+
+/* ===== How to / tips ===== */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.tipcard{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.tipcard .ti{font-size:26px;margin-bottom:10px}
+.tipcard h4{font-size:14.5px;margin-bottom:6px}
+.tipcard p{font-size:12.5px;color:var(--mu)}
+
+/* ===== Program ===== */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.pday{background:var(--bg2);border:1px solid var(--bd);border-radius:18px;padding:20px}
+.pday h4{font-size:15px;color:var(--o);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.pday table{width:100%;border-collapse:collapse;font-size:12.5px}
+.pday th,.pday td{padding:8px 6px;text-align:right;border-bottom:1px solid var(--bd)}
+.pday th{color:var(--mu);font-weight:500;font-size:11.5px}
+.pday td:last-child,.pday th:last-child{text-align:left;direction:ltr}
+.pnote{margin-top:20px;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:16px;padding:18px;font-size:13px}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid var(--bd);padding:30px 0;text-align:center;color:var(--mu);font-size:12.5px}
+
+/* ===== Modal ===== */
+.ovl{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:none;backdrop-filter:blur(4px)}
+.ovl.show{display:block}
+.mdl{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(680px,94vw);max-height:90vh;overflow-y:auto;background:var(--bg2);border:1px solid var(--bd);border-radius:24px;z-index:210;display:none;padding-bottom:26px}
+.mdl.show{display:block;animation:pop .3s}
+@keyframes pop{from{opacity:0;transform:translate(-50%,-46%)}to{opacity:1;transform:translate(-50%,-50%)}}
+.mh{background:var(--grad);padding:22px;text-align:center;border-radius:24px 24px 0 0;position:relative}
+.mh h3{color:#fff;font-size:21px;margin-top:8px}
+.mh .sub{color:#fff;opacity:.9;font-size:12px;direction:ltr;margin-top:4px}
+.mh .badge{display:inline-block;background:rgba(255,255,255,.22);padding:4px 16px;border-radius:20px;font-size:11.5px;color:#fff}
+.x{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.28);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:15px;cursor:pointer}
+.vid{margin:-20px auto 0;width:calc(100% - 40px);background:#000;border-radius:16px;overflow:hidden;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;border:1px solid var(--bd)}
+.vid img{width:100%;height:100%;object-fit:contain}
+.msec{padding:16px 24px 0}
+.msec h4{font-size:13.5px;color:var(--o);margin-bottom:8px}
+.msec li{font-size:13px;line-height:2.1}
+.msec ul{padding-right:18px}
+.mtip{margin:10px 24px 0;background:rgba(46,204,113,.09);border:1px solid rgba(46,204,113,.3);border-radius:14px;padding:14px;font-size:12.5px}
+.mtip b{color:#2ecc71}
+.yt{display:block;margin:18px 24px 0;background:linear-gradient(135deg,#ff3d3d,#c4302b);color:#fff;text-align:center;padding:13px;border-radius:14px;font-size:14px;font-weight:700}
+.yt:hover{filter:brightness(1.1)}
+
+/* ===== Back button + search ===== */
+.listhead{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.listhead h3{font-size:18px}
+.search{display:flex;align-items:center;background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:9px 14px;gap:8px;min-width:230px}
+.search input{border:none;outline:none;background:none;color:var(--tx);font-family:inherit;font-size:13px;flex:1}
+.backb{background:var(--bg3);border:1px solid var(--bd);color:var(--tx);font-family:inherit;font-size:13px;padding:8px 18px;border-radius:11px;cursor:pointer}
+.backb:hover{background:var(--bg3);border-color:var(--o)}
+.loadmsg{text-align:center;padding:50px;color:var(--mu);font-size:13.5px;grid-column:1/-1}
+.errbox{background:rgba(231,76,60,.1);border:1px solid rgba(231,76,60,.35);border-radius:14px;padding:18px;font-size:13px;line-height:2;grid-column:1/-1;text-align:center}
+@media(max-width:640px){.nav-links{display:none}.hero{padding:50px 0 60px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-in">
+    <div class="brand"><span class="bi">🏋️</span><span>باشگاه دیجیتال</span></div>
+    <div class="nav-links">
+      <a class="on" data-nav="home" onclick="goHome()">خانه</a>
+      <a data-nav="program" onclick="showProgram()">برنامه تمرینی</a>
+      <a data-nav="tips" onclick="showTips()">نکات مربی</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HOME ============ -->
+<div id="homeView">
+  <div class="hero">
+    <div class="container">
+      <h1>آموزش کامل <em>حرکات بدنسازی با دستگاه</em><br>برای کل بدن</h1>
+      <p>بیش از هزار حرکت دستگاهی و سیم‌کش با فیلم آموزشی متحرک، نحوه اجرای صحیح، عضلات درگیر و نکات مربیگری — همه در یک جای جمع‌وجور.</p>
+      <div class="cta"><a class="btn" onclick="document.getElementById('muscles').scrollIntoView()">شروع کن 💪</a></div>
+      <div class="stats-bar">
+        <div class="sb"><b>+۱٬۳۰۰</b><span>حرکت با فیلم</span></div>
+        <div class="sb"><b>۱۲</b><span>گروه عضلانی</span></div>
+        <div class="sb"><b>۱۷</b><span>آموزش فارسی کامل</span></div>
+        <div class="sb"><b>۴ روز</b><span>برنامه تمرینی</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="muscles">
+    <div class="container">
+      <div class="sec-head"><h2>گروه‌های <span>عضلانی</span></h2><p>روی هر گروه بزن تا حرکات دستگاهی و سیم‌کش آن را با فیلم ببینی</p></div>
+      <div class="mgrid" id="mgrid"></div>
+    </div>
+  </section>
+
+  <section id="tipsSection" style="display:none">
+    <div class="container">
+      <div class="sec-head"><h2>نکات <span>مربیگری</span></h2><p>پنج اصل طلایی تمرین با دستگاه</p></div>
+      <div class="tips">
+        <div class="tipcard"><div class="ti">🔧</div><h4>دستگاه را درست تنظیم کن</h4><p>ارتفاع صندلی و پشتی اشتباه یعنی مسیر غلط حرکت و فشار اضافی روی مفاصل. قبل از هر ست، تنظیمات را چک کن.</p></div>
+        <div class="tipcard"><div class="ti">⚖️</div><h4>وزنه واقع‌بینانه انتخاب کن</h4><p>وزنه خوب وزنه‌ای است که فرمت را خراب نکند، نه وزنه‌ای که فقط سنگین به نظر برسد.</p></div>
+        <div class="tipcard"><div class="ti">↔️</div><h4>دامنه کامل برو</h4><p>نیمه رفتن حرکت یعنی نصف فشار و نصف نتیجه. کشش کامل پایین، انقباض کامل بالا.</p></div>
+        <div class="tipcard"><div class="ti">🐢</div><h4>فاز منفی را کنترل کن</h4><p>بالا بردن وزنه مهم است، اما پایین آوردن کنترل‌شده حتی مهم‌تر — اینجاست که عضله واقعاً رشد می‌کند.</p></div>
+        <div class="tipcard"><div class="ti">🎯</div><h4>عضله هدف را حس کن</h4><p>اگر در حرکت سینه بیشتر شانه‌ات درد گرفت تا سینه، مشکل از تنظیم دستگاه یا فرم توست.</p></div>
+        <div class="tipcard"><div class="ti">🫁</div><h4>تنفس را فراموش نکن</h4><p>هنگام اعمال فشار بازدم و هنگام برگشت دم. حبس نفس طولانی فشار خون را بالا می‌برد.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programSection" style="display:none">
+    <div class="container">
+      <div class="sec-head"><h2>برنامه تمرینی <span>۴ روزه</span></h2><p>همه با دستگاه — مناسب از مبتدی تا پیشرفته</p></div>
+      <div class="pgrid">
+        <div class="pday"><h4>🔥 روز ۱ — سینه و پشت بازو</h4><table><tr><th>حرکت</th><th>ست×تکرار</th></tr><tr><td>پرس سینه دستگاه</td><td>4×8-12</td></tr><tr><td>فلای سینه (پک‌دک)</td><td>3×12</td></tr><tr><td>کراس‌اور سیم‌کش</td><td>3×12-15</td></tr><tr><td>پشت بازو سیم‌کش</td><td>3×10-15</td></tr></table></div>
+        <div class="pday"><h4>🚣 روز ۲ — زیربغل و جلو بازو</h4><table><tr><th>حرکت</th><th>ست×تکرار</th></tr><tr><td>لت پول‌دان</td><td>4×8-12</td></tr><tr><td>قایقی نشسته</td><td>4×10-12</td></tr><tr><td>فیله کمر دستگاه</td><td>3×15</td></tr><tr><td>جلو بازو دستگاه</td><td>3×10-15</td></tr></table></div>
+        <div class="pday"><h4>🦵 روز ۳ — پا و ساق</h4><table><tr><th>حرکت</th><th>ست×تکرار</th></tr><tr><td>پرس پا</td><td>4×10-15</td></tr><tr><td>جلو پا دستگاه</td><td>3×12-15</td></tr><tr><td>پشت پا دستگاه</td><td>3×12-15</td></tr><tr><td>ساق پا دستگاه</td><td>4×15-20</td></tr></table></div>
+        <div class="pday"><h4>⛰️ روز ۴ — سرشانه و شکم</h4><table><tr><th>حرکت</th><th>ست×تکرار</th></tr><tr><td>پرس سرشانه دستگاه</td><td>4×8-12</td></tr><tr><td>نشر جانب دستگاه</td><td>3×12-15</td></tr><tr><td>شراگ دستگاه</td><td>3×12</td></tr><tr><td>کرانچ سیم‌کش</td><td>3×15-20</td></tr></table></div>
+      </div>
+      <div class="pnote">💡 <b>نکته:</b> استراحت بین ست‌ها ۶۰ تا ۹۰ ثانیه. برای شروع ۳ جلسه در هفته کافی است. اول حرکات چندمفصلی سنگین، بعد حرکات تکمیلی و ایزوله. وزنه‌ای انتخاب کن که فرم را خراب نکند.</div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ EXERCISE LIST ============ -->
+<div id="listView" style="display:none">
+  <section>
+    <div class="container">
+      <div class="listhead">
+        <div style="display:flex;align-items:center;gap:12px">
+          <button class="backb" onclick="goHome()">→ خانه</button>
+          <h3 id="listTitle"></h3>
+        </div>
+        <div class="search"><span>🔍</span><input id="srch" placeholder="جستجو در حرکات..."></div>
+      </div>
+      <div class="exgrid" id="exgrid"></div>
+    </div>
+  </section>
+</div>
+
+<footer><div class="container">باشگاه دیجیتال — آموزش حرکات بدنسازی با دستگاه 🏋️ | فیلم‌ها از دیتابیس آزاد ExerciseGymGifsDB</div></footer>
+
+<div class="ovl" id="ovl" onclick="closeM()"></div>
+<div class="mdl" id="mdl"></div>
+
+<script>
+const CDN="https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/";
+const API=CDN+"api/en/";
+const GROUPS=[
+ {m:"pectorals",fa:"سینه",ic:"🛡️"},{m:"lats",fa:"زیربغل",ic:"🚣"},{m:"upper-back",fa:"پشت میانی",ic:"🔙"},
+ {m:"delts",fa:"سرشانه",ic:"⛰️"},{m:"biceps",fa:"جلو بازو",ic:"💪"},{m:"triceps",fa:"پشت بازو",ic:"🔧"},
+ {m:"quads",fa:"جلو ران",ic:"🦵"},{m:"hamstrings",fa:"پشت پا",ic:"🦿"},{m:"glutes",fa:"باسن",ic:"🍑"},
+ {m:"abs",fa:"شکم",ic:"🔥"},{m:"calves",fa:"ساق",ic:"🦶"},{m:"spine",fa:"کمر",ic:"🧘"}
+];
+const EQUIP={lever:"دستگاه اهرمی",machine:"دستگاه",cable:"سیم‌کش",smith:"اسمیت"};
+const RULES=[
+ {re:/chest-press|bench-press.*lever|lever.*press/,fa:"پرس سینه دستگاه",steps:["صندلی را طوری تنظیم کن که دسته‌ها هم‌سطح وسط سینه باشند.","کمر را به پشتی بچسبان و شانه‌ها را کمی عقب بده.","دسته‌ها را با کنترل به جلو فشار بده تا دست‌ها صاف شوند (آرنج را قفل نکن).","وزنه را آهسته به موقعیت شروع برگردان."],tip:"اگر به جای سینه شانه‌ات درد گرفت، احتمالاً صندلی خیلی پایین است."},
+ {re:/pec-deck|chest-fly|chest-flay|fly/,fa:"فلای سینه (پک‌دک)",steps:["آرنج‌ها را هم‌سطح شانه روی پدها قرار بده.","با انقباض سینه، دو دست را جلوی بدن به هم برسان.","یک لحظه در نقطه انقباض مکث کن.","به‌آرامی دست‌ها را عقب ببر تا کشش سینه حس شود."],tip:"دامنه حرکت را کامل برو؛ نیمه‌رفتن یعنی نصف نتیجه."},
+ {re:/crossover|cross-over|cross_cable/,fa:"کراس‌اور سیم‌کش",steps:["قرقره‌ها را در ارتفاع مناسب تنظیم کن (بالا برای زیرسینه).","بدن را کمی جلو متمایل کن و کمر را صاف نگه دار.","دسته‌ها را در مسیری منحنی به هم برسان.","با کنترل کامل برگرد."],tip:"کل حرکت را با عضله سینه کنترل کن، نه با شانه."},
+ {re:/lat-pulldown|pulldown/,fa:"لت پول‌دان",steps:["پد ران را تنظیم کن تا پاها ثابت بمانند.","میله را کمی بازتر از عرض شانه بگیر.","سینه را بالا نگه دار و میله را تا بالای سینه بکش (نه پشت گردن!).","آهسته بالا برو تا زیربغل کشیده شود."],tip:"کمر را خیلی عقب نبر؛ فشار باید روی زیربغل باشد نه ستون فقرات."},
+ {re:/seated.*row|row.*seated/,fa:"قایقی نشسته (سیم‌کش)",steps:["زانوها را کمی خم کن و کمر را صاف نگه دار.","دسته را به سمت شکم بکش و آرنج‌ها را نزدیک بدن نگه دار.","کتف‌ها را در انتهای حرکت به هم فشار بده.","با کنترل برگرد و بازوها را کامل کش کن."],tip:"این حرکت ضخامت پشت را می‌سازد؛ فرم از وزنه مهم‌تر است."},
+ {re:/shoulder-press/,fa:"پرس سرشانه دستگاه",steps:["صندلی را طوری تنظیم کن که دسته‌ها هم‌سطح گوش‌ها یا کمی پایین‌تر باشند.","کمر را به پشتی بچسبان.","دسته‌ها را بالا فشار بده ولی آرنج را در بالا قفل نکن.","آهسته پایین بیاور تا گوش‌ها."],tip:"اگر صندلی خیلی پایین باشد فشار اضافی روی شانه می‌آید."},
+ {re:/lateral-raise|lateralraise/,fa:"نشر جانب دستگاه",steps:["آرنج‌ها را کمی خم و ثابت نگه دار.","دست‌ها را از جانب تا هم‌سطح شانه بالا ببر.","در بالا یک لحظه مکث کن.","آهسته پایین بیاور."],tip:"وزنه سبک‌تر با اجرای تمیز از وزنه سنگین با تقلب بهتر جواب می‌دهد."},
+ {re:/shrug/,fa:"شراگ (کول) دستگاه",steps:["دسته‌ها را بگیر و بایست.","شانه‌ها را مستقیم به سمت گوش‌ها بالا ببر.","در بالا مکث کن و عضله کول را منقبض کن.","آهسته پایین بیاور."],tip:"شانه را نچرخان؛ حرکت فقط عمودی است."},
+ {re:/leg-press/,fa:"پرس پا",steps:["کمر و باسن را کامل به صندلی بچسبان.","پاها را عرض شانه روی صفحه قرار بده.","وزنه را تا زاویه ۹۰ درجه زانو پایین بیاور.","با فشار پاشنه وزنه را بالا ببر (زانو را کامل قفل نکن)."],tip:"اگر کمر از صندلی جدا شود فشار به ستون فقرات می‌آید."},
+ {re:/leg-extension/,fa:"جلو پا دستگاه",steps:["پشت چرخ دستگاه را روی مچ پا تنظیم کن.","پا را صاف و بالا کن تا عضله چهارسر کاملاً منقبض شود.","یک لحظه مکث کن.","آهسته پایین بیاور."],tip:"بدن را با تکان دادن بالا نکش؛ حرکت فقط از زانوست."},
+ {re:/leg-curl|femoral/,fa:"پشت پا دستگاه",steps:["پد را روی پشت ساق تنظیم کن.","پا را به سمت باسن خم کن تا همسترینگ منقبض شود.","در انتهای حرکت مکث کن.","آهسته برگرد تا عضله کشیده شود."],tip:"لگن را از صندلی بلند نکن؛ تقلب یعنی کاهش فشار روی پشت پا."},
+ {re:/hip-thrust/,fa:"هیپ تراست دستگاه",steps:["پشت شانه‌ها را به لبه صندلی تکیه بده.","بار را روی لگن (با پد) قرار بده.","لگن را تا صاف شدن کامل بدن بالا ببر.","در بالا باسن را منقبض کن و مکث کن، سپس آهسته پایین بیاور."],tip:"فشار باید روی باسن باشد نه کمر؛ چانه را کمی جمع کن."},
+ {re:/kickback/,fa:"کیک‌بک باسن سیم‌کش",steps:["بند را به مچ پا وصل کن و به دستگاه تکیه بده.","پا را صاف و با انقباض باسن به عقب ببر.","در نقطه اوج مکث کن.","آهسته برگرد؛ کمر خم نشود."],tip:"دامنه متعادل و کنترل‌شده بهتر از بالا بردن سنگین با قوس کمر است."},
+ {re:/curl|preacher/,fa:"جلو بازو دستگاه",steps:["بازو را کامل روی پد ثابت قرار بده.","دسته را به سمت شانه خم کن؛ حرکت فقط از آرنج.","در بالا عضله را منقبض کن.","آهسته باز کن تا عضله کشیده شود."],tip:"مزیت دستگاه حذف تقلب است؛ بازو را از پد بلند نکن."},
+ {re:/pushdown|triceps-press|triceps-extension|pressdown/,fa:"پشت بازو سیم‌کش",steps:["آرنج‌ها را کنار بدن ثابت نگه دار.","میله را تا کامل باز شدن دست پایین ببر.","در پایین مکث و انقباض کن.","آهسته تا ۹۰ درجه بالا ببر."],tip:"اگر آرنج جلو و عقب برود، فشار از پشت بازو کم می‌شود."},
+ {re:/crunch/,fa:"کرانچ سیم‌کش",steps:["زیر طناب دستگاه زانو بزن و دسته‌ها را کنار سر بگیر.","تنه را با انقباض شکم به سمت زانوها خم کن.","در پایین شکم را کامل منقبض کن.","آهسته برگرد."],tip:"با گردن نکش؛ حرکت از شکم است نه سر."},
+ {re:/calf-raise|calfraise/,fa:"ساق پا دستگاه",steps:["پنجه‌ها را روی صفحه و پاشنه را آزاد قرار بده.","روی پنجه بلند شو تا ساق کامل منقبض شود.","در بالا ۱ ثانیه مکث کن.","آهسته پایین برو تا کشش کامل ساق."],tip:"دامنه کامل (کشش کامل پایین، انقباض کامل بالا) کلید رشد ساق است."},
+ {re:/back-extension|hyperextension/,fa:"فیله کمر دستگاه",steps:["لگن را روی پد قرار بده و پاها را ثابت کن.","تنه را با انقباض عضلات کمر بالا بیاور تا خط بدن.","در بالا مکث کن.","آهسته پایین بیاور."],tip:"بالاتر از خط بدن نرو تا فشار اضافی به مهره‌ها نیاید."}
+];
+const GENERIC=["وضعیت شروع را با آراستن صحیح بدن اتخاذ کن.","قبل از شروع حرکت، عضله هدف را درگیر کن.","حرکت را با کنترل و حفظ فرم صحیح اجرا کن.","فاز برگشت (منفی) را آهسته و کنترل‌شده انجام بده.","هنگام اعمال فشار بازدم و هنگام برگشت دم."];
+const cache={};let curGroup=null,curList=[];
+
+function findFa(slug){return RULES.find(r=>r.re.test(slug))}
+const gif=s=>CDN+s+".gif";
+
+// muscle grid
+document.getElementById("mgrid").innerHTML=GROUPS.map(g=>`<div class="mcard" onclick="pick('${g.m}')"><div class="mi">${g.ic}</div><div class="mn">${g.fa}</div><div class="mc">دستگاه و سیم‌کش</div></div>`).join("");
+
+async function getGroup(m){
+  if(cache[m])return cache[m];
+  const r=await fetch(API+"muscles/"+m+".json");
+  const j=await r.json();
+  const list=j.exercises.filter(e=>["lever","machine","cable","smith"].includes(e.equipment)).slice(0,40);
+  cache[m]=list;return list;
+}
+function nav(on){document.querySelectorAll(".nav-links a").forEach(a=>a.classList.toggle("on",a.dataset.nav===on))}
+function goHome(){
+  nav("home");curGroup=null;
+  document.getElementById("homeView").style.display="block";
+  document.getElementById("listView").style.display="none";
+}
+function showProgram(){nav("program");goHome();document.getElementById("programSection").style.display="block";document.getElementById("tipsSection").style.display="none";document.getElementById("muscles").style.display="none";window.scrollTo(0,0)}
+function showTips(){nav("tips");goHome();document.getElementById("tipsSection").style.display="block";document.getElementById("programSection").style.display="none";document.getElementById("muscles").style.display="none";window.scrollTo(0,0)}
+async function pick(m){
+  nav("home");
+  curGroup=m;
+  document.getElementById("homeView").style.display="none";
+  document.getElementById("listView").style.display="block";
+  document.getElementById("srch").value="";
+  renderList(m,"");
+  window.scrollTo(0,0);
+}
+async function renderList(m,q){
+  const g=GROUPS.find(x=>x.m===m);
+  const grid=document.getElementById("exgrid");
+  document.getElementById("listTitle").textContent=g.ic+" "+g.fa;
+  grid.innerHTML='<div class="loadmsg">⏳ در حال دریافت حرکات...</div>';
+  try{
+    let list=await getGroup(m);
+    if(q)list=list.filter(e=>e.name.toLowerCase().includes(q.toLowerCase()));
+    curList=list;
+    grid.innerHTML=list.length?list.map(e=>{
+      const f=findFa(e.slug);
+      return `<div class="excard" onclick="detail('${e.slug}','${m}','${e.name.replace(/'/g,"")}')">
+        <div class="thumb"><img src="${gif(e.slug)}" loading="lazy" onerror="this.style.opacity=.25"></div>
+        <div class="body"><div class="nm">${f?f.fa:e.name}</div><div class="en">${e.name}</div>
+        <div class="tags"><span class="tg">${EQUIP[e.equipment]||e.equipment}</span>${f?'<span class="tg g">آموزش فارسی</span>':''}</div></div></div>`;
+    }).join(""):'<div class="loadmsg">حرکتی یافت نشد.</div>';
+  }catch(err){
+    grid.innerHTML='<div class="errbox">⚠️ دریافت اطلاعات ناموفق بود.<br>نمایش فیلم حرکات به اینترنت نیاز دارد. اتصال را بررسی کن و دوباره تلاش کن.<br><br><button class="backb" onclick="renderList(\''+m+'\',\'\')">🔄 تلاش مجدد</button></div>';
+  }
+}
+document.getElementById("srch").oninput=e=>{if(curGroup)renderList(curGroup,e.target.value)};
+
+function detail(slug,m,name){
+  const f=findFa(slug);
+  const e=cache[m]?cache[m].find(x=>x.slug===slug):null;
+  const steps=f?f.steps:GENERIC;
+  document.getElementById("mdl").innerHTML=`
+  <div class="mh"><button class="x" onclick="closeM()">✕</button><div class="badge">🎬 فیلم آموزشی</div><h3>${f?f.fa:name}</h3><div class="sub">${name}</div></div>
+  <div class="vid"><img src="${gif(slug)}" onerror="this.parentElement.innerHTML='⚠️ برای نمایش فیلم به اینترنت نیاز است'"></div>
+  <div class="msec"><h4>📝 نحوه اجرا</h4><ul>${steps.map(s=>'<li>'+s+'</li>').join("")}</ul></div>
+  ${f?'<div class="mtip"><b>💡 نکته مربی:</b> '+f.tip+'</div>':''}
+  ${e?'<div class="msec"><h4>🎯 عضلات</h4><p style="font-size:12.5px">هدف اصلی: <b>'+(e.target||m)+'</b>'+(e.secondaryMuscles&&e.secondaryMuscles.length?' — کمکی: '+e.secondaryMuscles.join("، "):'')+'</p></div>':''}
+  <a class="yt" target="_blank" href="https://www.youtube.com/results?search_query=${encodeURIComponent(name+" exercise form")}">▶️ مشاهده ویدیوی کامل آموزشی در یوتیوب</a>`;
+  document.getElementById("ovl").classList.add("show");
+  document.getElementById("mdl").classList.add("show");
+  document.body.style.overflow="hidden";
+}
+function closeM(){
+  document.getElementById("ovl").classList.remove("show");
+  document.getElementById("mdl").classList.remove("show");
+  document.body.style.overflow="";
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeM()});
+</script>
+</body>
+</html>
